@@ -1,0 +1,13 @@
+name: wine-prediction-best-RF
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      n_estimators: int
+      max_depth: {type:int, default:7}
+      exp_name: {type:str, default:"final"}
+    command: "python train.py {n_estimators} {max_depth} {exp_name}"
+
+# mlflow run -P n_estimators=300 -P max_depth=7 -P exp_name="final" .

@@ -1,0 +1,29 @@
+MLFlow-Projects
+---------------
+An MLflow Project is a format for packaging data science code in a reusable and reproducible way.
+usecase:
+Suppose other datascientist/MLengineer need to rerun our experiment.In that case we can provide the entire code and 
+requirements for recreate experiments in form of MLProjects.
+
+Here we encapsulate every code, data and parameters in MLProject file so that the experiment can be recreated.
+Note: For that create a MyProject.yaml file with conda path along with parameters, train and validation code path and command to execute those.
+
+MLProject file: 
+* name: name of the project 
+* entry_points: Commands that can be run within the project, and information about their parameters. 
+Most projects contain at least one entry point that you want other users to call. Some projects can also contain more than one entry point:
+for example, we might have a single Git repository containing multiple featurization algorithms. We can also call any .py or .sh file in the project as an entry point.
+* environment: conda/docker environmnts for project execution.
+
+May contains following files:
+Need following components:
+
+* MLProject.yaml 
+* conda.yaml  (environment)
+* train.py  
+* validate.py (if present)
+
+
+
+# mlflow run -P n_estimators=300 -P max_depth=7 -P exp_name="final" 
+

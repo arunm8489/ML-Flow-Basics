@@ -1,0 +1,12 @@
+MLFlow-Models
+-------------
+An MLflow Model is a standard format for packaging machine learning models that can be used in a variety of 
+downstream tools—for example, real-time serving through a REST API
+
+
+eg: for sklearn it have a 
+* conda.yaml
+* MLModel
+* model.pkl
+* requirements.txt
+
