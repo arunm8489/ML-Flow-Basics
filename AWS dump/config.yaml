@@ -1,0 +1,30 @@
+params:
+    app_name: "mlops-sagemaker"
+    execution_role_arn: "arn:aws:iam::004116853041:role/service-role/AmazonSageMaker-ExecutionRole-20220510T162237" 
+    #we need to create sagemaker role for that
+    region: "us-east-1"
+    s3_bucket_name: "mlflow-artifacts001"
+    # image ecr uri copied after creating ecr
+    image_ecr_uri: "004116853041.dkr.ecr.us-east-1.amazonaws.com/mlflow-pyfunc:1.25.1"
+
+    experiment_id: "1"
+    run_id: "aa50480fc32f45099b5ed60c4ac2aa73"
+    model_name: "model"
+
+
+# s3 bucket
+# amazon rds - local workbench
+# configure mlflow for upload to s3 when needed
+
+#mlflow server --backend-store-uri mysql://admin:redhat123@database-mlflow.c4cohmxef4v5.us-east-1.rds.amazonaws.com/mlflowdb
+# --default-artifact-root ./artifacts --host 127.0.0.1 -p 5000
+
+# create sagemaker role and get arn(with policy sagemaker access to s3)
+# configure mlflow code for deployment(including prediction)
+
+# start docker
+# mlflow sagemaker build-and-push-container
+#-- this will push a container to ECR
+
+
+
